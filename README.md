@@ -20,11 +20,11 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 1. register
 -------------------------------------------------------------------
 	
-  • efectueaza inregistrarea unui client
+  • efectueaza inregistrarea unui client <br/>
 	• se citesc de la stdin username-ul si parola si se creeaza un payload JSON
-	cu acestea 
-	• se creeaza o cerere POST care este trimisa catre server
-	• se verifica raspunsul de la server
+	cu acestea <br/>
+	• se creeaza o cerere POST care este trimisa catre server <br/>
+	• se verifica raspunsul de la server <br/>
 	• daca cererea a fost realizata cu succes se afiseaza la stdout mesajul:
 
     "[SUCCESS] Register", urmat de codul si textul statusului
@@ -40,19 +40,19 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 2. login
 ---------------------------------------------------------------------
 
-  • efectueaza autentificarea unui client
-	• la inceput se verifica daca exista deja un client logat
-	• daca un client este deja logat se afiseaza urmatorul mesaj
+  • efectueaza autentificarea unui client <br/>
+	• la inceput se verifica daca exista deja un client logat <br/>
+	• daca un client este deja logat se afiseaza urmatorul mesaj <br/>
 
 		"Already logged in!"
 
   • se citesc de la tastatura username-ul si parola si se creeaza un payload
-	JSON cu acestea
-	• se creeaza o cerere de tip POST si se trimite catre server
+	JSON cu acestea <br/>
+	• se creeaza o cerere de tip POST si se trimite catre server <br/>
 	• este preluat raspunsul de la server si se verifica daca cererea s-a realizat
-	cu succes
+	cu succes <br/>
 	• daca cererea s-a realizat cu succes, se salveaza cookie-ul de logare si se 
-	afiseaza urmatorul mesaj
+	afiseaza urmatorul mesaj <br/>
 
 		"[SUCCESS] Login", urmat de codul si textul status si cookie-ul pe urmatoarea linie
 
@@ -65,9 +65,9 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 3. enter_library
 ------------------------------------------------------------------------
 
-  • efectueaza cererea de acces la biblioteca
-	• la inceput se verifica daca clientul este logat si deja are autorizatie
-	• daca clientul nu este logat se va afisa urmatorul mesaj
+  • efectueaza cererea de acces la biblioteca <br/>
+	• la inceput se verifica daca clientul este logat si deja are autorizatie <br/>
+	• daca clientul nu este logat se va afisa urmatorul mesaj <br/>
 
 		"You are not logged in!" 
 
@@ -75,9 +75,9 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 
 		"You already have authorization!"
 
-  • se creeaza o cerere de tip GET si se trimite catre server
-	• este preluat raspusnul de la server si se verifica daca s-a realizat cu succes
-	• daca cererea s-a realizat cu succes, se salveaza Token-ul JWT si se afiseaza mesajul
+  • se creeaza o cerere de tip GET si se trimite catre server <br/>
+	• este preluat raspusnul de la server si se verifica daca s-a realizat cu succes <br/>
+	• daca cererea s-a realizat cu succes, se salveaza Token-ul JWT si se afiseaza mesajul <br/>
 
 		"[SUCCESS] You got authorization to the library", urmat de codul si textul statut si
 		token-ul JWT pe urmatoarea linie
@@ -91,8 +91,8 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 4. get_books
 ----------------------------------------------------------------------
 
-  • efectueaza cerea tuturor cartilor din biblioteca unui client
-	• la inceput se verifica daca clientul este logat si are autorizatie
+  • efectueaza cerea tuturor cartilor din biblioteca unui client <br/>
+	• la inceput se verifica daca clientul este logat si are autorizatie <br/>
 	• daca clientul nu este logat, se afiseaza mesajul:
 
 		"You are not logged in!"
@@ -101,8 +101,8 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 
 		"You don't have authorization to library!" 
 
-  • se creeaza o cerere de tip GET si se trimite catre server
-	• raspunusul server-ului este preluat si se verifica daca s-a realizat cu succes
+  • se creeaza o cerere de tip GET si se trimite catre server <br/>
+	• raspunusul server-ului este preluat si se verifica daca s-a realizat cu succes <br/>
 	• daca s-a realizat cu succes, se afiseaza mesajul
 
 		"[SUCCESS] The books in your library are", urmat de codul si textul status,
@@ -120,8 +120,8 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 5. get_book
 ----------------------------------------------------------------------
 
-  • efectueaza afisarea tuturor informatiilor despre o carte cu un anumit ID
-	• la inceput se verifica daca clientul este logat si are autorizatie
+  • efectueaza afisarea tuturor informatiilor despre o carte cu un anumit ID <br/>
+	• la inceput se verifica daca clientul este logat si are autorizatie <br/>
 	• daca clientul nu este logat, se afiseaza mesajul:
 
 		"You are not logged in!"
@@ -130,10 +130,10 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 
 		"You don't have authorization to library!" 
 
-  • se citeste de la stdin ID-ul cartii dorite
-	• se creeaza o cerere de tip GET si se trimite catre server
+  • se citeste de la stdin ID-ul cartii dorite <br/>
+	• se creeaza o cerere de tip GET si se trimite catre server <br/>
 	• raspunsul de la server este preluat si se verifica daca cererea s-a efectuat
-	cu succes
+	cu succes <br/>
 	• daca s-a realizat cu succes, se afiseaza mesajul
 
 		"[SUCCES] Got the book with ID = id_citit_de_la_stdin", urmat de codul si
@@ -150,8 +150,8 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 6. add_book
 ----------------------------------------------------------------------
 
-  • realizeaza adaugarea unei carti in biblioteca unui client
-	• la inceput se verifica daca clientul este logat si are autorizatie
+  • realizeaza adaugarea unei carti in biblioteca unui client <br/>
+	• la inceput se verifica daca clientul este logat si are autorizatie <br/>
 	• daca clientul nu este logat, se afiseaza mesajul:
 
 		"You are not logged in!"
@@ -161,9 +161,9 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 		"You don't have authorization to library!" 
 
   • se citesc pe rand de la stdin: titlul, autorul, genul, editorul si numarul de 
-	pagini si se creeaza un payload JSON
-	• se creeaza o cerere de tip POST si se trimite catre server
-	• raspunsul de la server este preluat si se verifica daca cererea s-a realizat cu succes
+	pagini si se creeaza un payload JSON <br/>
+	• se creeaza o cerere de tip POST si se trimite catre server <br/>
+	• raspunsul de la server este preluat si se verifica daca cererea s-a realizat cu succes <br/>
 	• daca s-a realizat cu succes, se afiseaza mesajul
 
 		"[SUCCESS] The book is added", urmat de cod si text status
@@ -178,8 +178,8 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 7. delete_book
 ----------------------------------------------------------------------
 
-  • realizeaza stergearea unei carti cu un anumit id din biblioteca clientului
-	• la inceput se verifica daca clientul este logat si are autorizatie
+  • realizeaza stergearea unei carti cu un anumit id din biblioteca clientului <br/>
+	• la inceput se verifica daca clientul este logat si are autorizatie <br/>
 	• daca clientul nu este logat, se afiseaza mesajul:
 
 		"You are not logged in!"
@@ -188,10 +188,10 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 
 		"You don't have authorization to library!" 
 
-  • se citeste de la stdin ID-ul cartii dorite
-	• se creeaza o cerere de tip DELETE si se trimite catre server
+  • se citeste de la stdin ID-ul cartii dorite <br/> 
+	• se creeaza o cerere de tip DELETE si se trimite catre server <br/>
 	• raspunsul de la server este preluat si se verifica daca a fost realizat
-	cu succes
+	cu succes <br/>
 	• daca s-a realizat cu succes, este afisat mesajul
 
 		"[SUCCESS] The book with ID = id_citit_stdin is deleted", urmat de cod si text status
@@ -206,15 +206,15 @@ fost preluate din urmatorul link: https://github.com/kgabis/parson
 ### 8. logout
 ------------------------------------------------------------------------- 
 
-  • realizeaza logout-ul unui client
-	• se verifica daca clientul este logat sau nu
+  • realizeaza logout-ul unui client <br/>
+	• se verifica daca clientul este logat sau nu <br/>
 	• daca nu este logat, se afiseaza mesajul
 
 		"You are not logged in!"
 
-  • se creeaza o cerere de tip GET si se trimite catre server
+  • se creeaza o cerere de tip GET si se trimite catre server <br/>
 	• raspunsul server-ului este preluat si se verifica daca cererea s-a realizat
-	cu succes
+	cu succes <br/>
 	• daca s-a realizat cu succes, se afiseaza mesajul
 
 		"[SUCCESS] You are logged out", urmat de cod si text status
